@@ -1,0 +1,287 @@
+
+body {
+  background-color:#f0f2f5;
+  font-family: Roboto;
+  font-size:20px;
+  color: #333333;
+	
+}
+
+.top{
+text-align:center;
+background-color:#2e3b55;;
+border-radius:20px;
+font-family: Roboto;
+margin:15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+colour:#333333;
+font-family: Roboto;
+}
+
+h3{
+color:#ffffff;
+text-align:center;
+font-size:17px;
+font-family: Roboto;
+
+}
+
+b2{
+color:#333333;
+text-align:left;
+font-size:16px;
+font-family: Roboto;
+
+}
+
+h4{
+color:#333333;
+text-align:left;
+font-size:17px;
+font-family: Roboto;
+
+}
+
+h2{
+color:#2e3b55;
+text-align:right;
+font-size:20px;
+margin-left:100px;
+margin-top:30px;
+font-family: Roboto;
+color:black
+
+}
+
+img{
+display:block;
+width:20%;
+height:30%;
+padding:0px;
+}
+
+
+#header{
+display:flex;
+word-spacing:5 px;
+list-style-type:none;
+text-align:center;
+background-color:#2e3b55;
+margin:15px;
+color:white;
+border-radius:10px;
+padding:2px;
+}
+
+#navbar{
+word-spacing:30px;
+list-style-type:none;
+text-align:center;
+background-color:#627aaa;
+margin:15px;
+color:#333333;
+border-radius:10px;
+padding:0.5px;
+font-size:20px strong;
+}
+
+#navbar li{
+display:inline;
+}
+
+#navbar ul li a{
+text-decoration:none;
+color: #333333;
+
+}
+
+#navbar ul li a:hover{
+background-color: #f9c74f;;
+color:#333333;
+}
+.main1{
+background-color:#ffffff; 
+font-size:120%;
+border-radius:20px;
+margin-top:10px;
+margin-bottom:10px;
+margin-left:10px;
+margin-right:310px;
+padding:20px;
+height:250px;
+font-family: Roboto;
+
+}
+
+#submit{
+background-color:#5bc0be;
+color:#ffffff;
+font-size:17px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#submit:hover{
+background-color:#2e3b55;
+color:white;
+}
+
+.main2{
+background-color:#ffffff; 
+font-size:120%;
+border-radius:20px;
+margin-top:20px;
+margin-bottom:10px;
+margin-left:10px;
+margin-right:310px;
+padding:20px;
+height:380px;
+font-family: Roboto;
+
+}
+
+
+
+.sidebar1{
+float:right;
+border-radius:10px;
+background-color:#ffffff;
+padding:10px;
+width:260px;
+margin:5px;
+clear:both;
+font-family: Roboto;
+
+}
+
+.sidebar2{
+float:right;
+border-radius:10px;
+background-color:#ffffff;
+padding:10px;
+width:260px;
+font-family: Roboto;
+margin:5px;
+clear:both;
+}
+
+#sidebar1 ul li a{
+text-decoration:none;
+
+
+}
+
+.confirmation-message {
+   color: red;
+   font-weight: bold;
+   margin-top: 10px;
+}
+
+.reviews {
+  float: right;
+  border-radius: 10px;
+  background-color: #ffffff;;
+  padding: 5px;
+  width: 260px;
+  height:200px;	
+  margin: 5px;
+  clear:both;
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.reviews:hover {
+  opacity: 0.5; 
+ 
+}
+
+#footer{
+background-color:#2e3b55;
+margin:10px;
+width:98%;
+clear:both;
+font-size:80%;
+display:block;
+padding:20px;
+color:#ffffff;
+text-align:center;
+font-family: Roboto;
+border-radius:10px;
+
+
+}
+
+
+.image-container {
+     width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    box-sizing: border-box;
+   	
+}
+
+.floating-image {
+    display: inline-block; 
+    width: 240px;
+    height:240px;
+    object-fit:cover; 	 
+    margin-right: 5px; 
+    flex-shrink:0;
+    animation: scroll-left 20s linear infinite; 
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        .modal-content {
+            background-color:#2e3b55;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+	    color:white;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+

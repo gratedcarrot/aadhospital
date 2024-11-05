@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    
+    <title>Specialties - AAD Multi-speciality Hospital</title>
+    
+    <script src="script.js" defer></script>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #2e3b55;
+    color: white;
+    padding: 8px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+main {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img {
+    width: 300px;
+    height:150px;	
+    margin-top: 0px;
+}
+
+footer {
+    background-color: #2e3b55;
+    color: white;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Our Specialties</h1>
+        <select id="specialty-dropdown" onchange="showSpecialtyDetails()">
+            <option value="" disabled selected>Select a Specialty</option>
+            <option value="cardiac">Cardiac Care</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="neurology">Neurology</option>
+            <option value="obgyn">Obstetrics and Gynecology</option>
+            <option value="dermatology">Dermatology</option>
+        </select>
+    </header>
+
+    <main id="specialty-details">
+        
+    </main>
+
+    <footer>
+        <p>Contact us to schedule an appointment or for more information on our specialties.</p>
+	<p ><a style="color:white;" href="Home.html">Back to Home</a></p>
+    </footer>
+
+
+</body>
+</html>

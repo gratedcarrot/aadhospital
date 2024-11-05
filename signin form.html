@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+    <style>
+        .container{
+		display:inline-block;
+		background-color:#2e3b55;
+		padding:20px;
+		text-align:left;
+		font-size:20px;
+		color:white;
+		border-radius: 10px;
+		border:3px solid black;
+		margin-top:20px;
+	        width:35%;
+	}
+	.container input {
+      		width: 90%;
+      		padding: 10px;
+      		margin-bottom:10px;
+      		border-radius:10px;
+      		border:3px solid black;			
+      
+	}
+
+	      
+    </style>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+
+<body>
+ 
+<body><center>
+<div id="navbar">
+    <ul>
+        <li><strong><a style="font-family: Roboto;color:black;"href="Home.html">Home</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="photogallery.html">Photo-Gallery</a></strong></li>
+	<li><strong><a style="font-family: Roboto;color:black;" href="Facilities.html">Facilities</a></strong></li>
+	<li><strong><a style="font-family: Roboto;color:black;"href="specialities.html">Specialities</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="cost-estimate.html">Cost-Estimate</a></strong></li>
+        
+        
+
+    </ul>
+</div>
+<div class="container">
+<center><h2 style="color:white; text-align:left;">Registration Form</h2></center>
+
+<form name="form" onsubmit="return validate()">
+Enter name
+<input type="text" name="name">
+<br>
+Enter email
+<input type="email" name="email" patter="{30}">
+<br>
+Enter Phone no
+<input type="tel" name="number" pattern="[0-9]{10}">
+<br>
+Enter dob
+<input type="date" name="dob">
+<br>
+
+<br>
+<center>
+<input type="submit" name="submit">
+</center>
+</div>
+</center>
+
+<script>
+function validate(){
+var name=document.form.name;
+var email=document.form.email;
+var number=document.form.number;
+var dob=document.form.dob;
+
+if(name.value==""){
+alert("enter name field");
+return false;
+}
+
+if(email.value==""){
+alert("enter email field");
+return false;
+}
+
+if(number.value==""){
+alert("enter phone number field");
+return false;
+}
+if(dob.value==""){
+alert("enter DOB field");
+return false;
+}
+alert("Successfully registered");
+return true;
+}
+</script>
+
+       
+        
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+       
+        .carousel-container {
+            position: relative;
+            width: 100%; 
+            max-width: 500px;
+	    height:500px;	
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+           
+        }
+
+       
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+       
+        .carousel-slide img {
+            min-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color:rgba(0,0,0,0.5);
+            color: white;
+            border: none; 
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+
+<div id="navbar">
+    <ul>
+        <li><strong><a style="font-family: Roboto;color:black;"href="Home.html">Home</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="facilities.html">Facilities</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="cost-estimate.html">Cost-Estimate</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="specialities.html">Specialities</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="signin form.html">SignIn</a></strong></li>
+    </ul>
+</div>
+
+<h2 style="color:black; text-align:center;"> Photo Gallery </h2>
+<div class="carousel-container">
+    <div class="carousel-slide" id="carouselSlide">
+        <img src="Hospital1.jpeg" alt="Image 1">
+        <img src="Hospital2.jpeg" alt="Image 2">
+        <img src="Hospital3.jpeg" alt="Image 3">
+        <img src="Hospital4.jpeg" alt="Image 4">
+	<img src="Hospital5.jpeg" alt="Image 5">
+        <img src="Hospital6.jpeg" alt="Image 6">
+    </div>
+    <button class="prev" onclick="prevSlide()"</button><
+    <button class="next" onclick="nextSlide()"</button>>
+</div>
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slide = document.getElementById('carouselSlide');
+        const totalSlides = slide.children.length;
+        currentIndex = (index + totalSlides) % totalSlides; // Loop around
+        slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Auto scroll every 5 seconds
+    setInterval(nextSlide, 6000);
+</script>
+
+</body>
+</html>

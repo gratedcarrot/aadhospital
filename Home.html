@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAD Multi-specialty Hospital</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+<script src="cdnfiles/jquery-3.7.1.js"></script>
+
+
+</head>
+<body>
+
+<div class="top"></div>
+
+<div id="header">
+    <img src="logo.jpg" style="height:90px; margin:2px;";alt="">
+    <div class="header-text">
+        <h2 style="color:#ffffff;">AAD Multi-speciality 500 Bed Hospital : Mumbai, Pune, Delhi, Bangalore</h2>
+    </div>
+</div>
+
+<div id="navbar">
+    <ul>
+        <li><strong><a style="font-family: Roboto;color:black;"href="Home.html">Home</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="#about-us-section">About-us</a></strong></li>
+        <li>
+            <strong><a style="font-family: Roboto;color:black;" id="toggleBranches">Branches</a></strong>
+            <div id="branchList" style="display: none;">
+                <ul>
+                    <li><a style="color:red; " href="#">Mumbai</a></li>
+                    <li><a style="color:red;" href="#">Pune</a></li>
+                    <li><a style="color:red;" href="#">Delhi</a></li>
+                    <li><a style="color:red;" href="#">Bangalore</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="photogallery.html">Photo-Gallery</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="facilities.html">Facilities</a></strong></li>
+	
+        <li><strong><a style="font-family: Roboto;color:black;"href="cost-estimate.html">Cost-Estimate</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="javascript:void(0)" onclick="openModal()">Contact-us</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;" href="signin form.html">SignIn</a></strong></li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function(){
+            $('#toggleBranches').click(function(){
+            $('#branchList').slideToggle(); 
+        });
+    });
+</script>
+<div class="sidebar1">
+    <h3 style="color:black;">Specialties</h3>
+    <ul><h4>
+        <li><a style="color:black;" href="specialities.html">Cardiac-care</a></li>
+        <li><a style="color:black;" href="specialities.html">Orthopedics</a></li>
+        <li><a style="color:black;" href="specialities.html">Neurology</a></li>
+        <li><a style="color:black;" href="specialities.html">Obstetrics and Gynecology</a></li>
+        <li><a style="color:black;" href="specialities.html">Dermatology</a></li>
+    </h4></ul>
+</div>
+
+<div class="sidebar2">
+    <h3 style="color:black;">OPD Appointment</h3><h4>
+    <form id="appointmentForm" onsubmit="showConfirmation(event)">
+        <label for="speciality">Select Speciality:</label>
+        <select id="speciality" name="speciality">
+            <option value="orthopaedics">Orthopaedics (Dr. A. Sharma)</option>
+            <option value="pediatrics">Pediatrics (Dr. B. Singh)</option>
+            <option value="dermatologist">Dermatologist (Dr. C. Rao)</option>
+            <option value="general-surgeon">General Surgeon (Dr. D. Verma)</option>
+        </select><br>
+        <label for="appointment-date">Select Date:</label><br>
+        <input type="date" id="appointment-date" name="appointment-date"><br>
+        <label for="appointment-time">Select Time Slot:</label>
+        <select id="appointment-time" name="appointment-time">
+            <option value="9am-10am">9:00 AM - 10:00 AM</option>
+            <option value="10am-11am">10:00 AM - 11:00 AM</option>
+            <option value="11am-12pm">11:00 AM - 12:00 PM</option>
+            <option value="12pm-1pm">12:00 PM - 1:00 PM</option>
+            <option value="3pm-4pm">3:00 PM - 4:00 PM</option>
+            <option value="4pm-5pm">4:00 PM - 5:00 PM</option>
+        </select><br><br>
+        <input type="submit" id="submit" value="Book Appointment">
+    </form>
+	<div id="confirmationMessage" class="confirmation-message"></div>
+	</h4>
+   
+<h3 style="color:black;">Patient Reviews</h3>
+<video width="260" height="200" controls poster="Design.png">
+        <source src="review video.mp4" type="video/mp4">
+        
+    </video>
+</div>
+
+
+<div class="main1">
+    <div class="image-container">
+        <img class="floating-image" src="Hospital1.jpeg" alt="Image 1">
+        <img class="floating-image" src="Hospital2.jpeg" alt="Image 2">
+        <img class="floating-image" src="Hospital3.jpeg" alt="Image 3">
+        <img class="floating-image" src="Hospital4.jpeg" alt="Image 4">
+        <img class="floating-image" src="Hospital5.jpeg" alt="Image 5">
+        <img class="floating-image" src="Hospital6.jpeg" alt="Image 6">
+    </div>
+</div>
+
+<div class="main2">
+<div id="about-us-section">
+    <h2 style="text-align:left; margin:0;">About Us</h2>
+    <h4 style="text-align:justify;color:black; font-size:20px;font-style:italic;font-family: Roboto;">AAD Multispeciality hospitals were started by three new generation enterpreniours - Aryan Paode, Akasha Sathay and Dhruv Dhilla in 2022.<br><br>It staretd with initial 500 bed hospital in Mumbai and soon expanded to Delhi, Pune and Bangalore. Each of these hospitals are equipped with world class diagnostic and treatment facilties and renowned full time and visiting doctors. Our Mumbai and Delhi hospitals are accredited with honour of being amongst top 10 multi-speciality hospitals in India by Medial Association of India.<br><br> Our hospitals cater to all segments of society and also support econimically weaker section with completely free of cost services under Ayushman Bharat Scheme.<br><br>We aim to open 20 new fully equipped multispeciality hospitals in tier-3 cities with objective to provide world class medical facilities even in smaller towns. </h4>
+</div>
+</div>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 1 JVPSD, Mumbai, India</p>
+            <p><strong>Toll-Free:</strong> 1800-123-4567</p>
+            <p><strong>Email:</strong> contact@aadhospitals.com</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+  
+        
+   <marquee> &copy; 2024 AAD hospitals.com. All rights reserved.</marquee>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('contactModal').style.display = 'block';
+    }
+
+   
+    function closeModal() {
+        document.getElementById('contactModal').style.display = 'none';
+    }
+
+    
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('contactModal')) {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+    };
+function showConfirmation(event) {
+        event.preventDefault();        
+        const confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.textContent = "Appointment Confirmed"; 
+    }
+
+</script>
+
+</body>
+</html>

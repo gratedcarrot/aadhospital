@@ -33,20 +33,21 @@
 <body><center>
 <div id="navbar">
     <ul>
-        <li><strong><a style="font-family: Roboto;color:black;"href="index.html">Home</a></strong></li>
+        <li><strong><a style="font-family: Roboto;color:black;"href="Home.html">Home</a></strong></li>
         <li><strong><a style="font-family: Roboto;color:black;" href="photogallery.html">Photo-Gallery</a></strong></li>
-	<li><strong><a style="font-family: Roboto;color:black;" href="facilities.html">Facilities</a></strong></li>
+	<li><strong><a style="font-family: Roboto;color:black;" href="Facilities.html">Facilities</a></strong></li>
 	<li><strong><a style="font-family: Roboto;color:black;"href="specialities.html">Specialities</a></strong></li>
         <li><strong><a style="font-family: Roboto;color:black;"href="cost-estimate.html">Cost-Estimate</a></strong></li>
-        
-        
+        <li><strong><a style="font-family: Roboto;color:black;" href="csr.html">CSR</a></strong></li>
+       
 
     </ul>
 </div>
 <div class="container">
 <center><h2 style="color:white; text-align:left;">Registration Form</h2></center>
 
-<form name="form" onsubmit="return validate()">
+
+<form name="form" onsubmit="return validate(event)">
 Enter name
 <input type="text" name="name">
 <br>
@@ -62,13 +63,17 @@ Enter dob
 
 <br>
 <center>
-<input type="submit" name="submit">
+<input type="submit" id="submit">
+<div id="confirmationMessage" class="confirmation-message"></div>
 </center>
 </div>
+
 </center>
 
 <script>
-function validate(){
+function validate(event){
+
+event.preventDefault();
 var name=document.form.name;
 var email=document.form.email;
 var number=document.form.number;
@@ -92,7 +97,9 @@ if(dob.value==""){
 alert("enter DOB field");
 return false;
 }
-alert("Successfully registered");
+   	
+    const confirmationMessage = document.getElementById("confirmationMessage");
+    confirmationMessage.textContent = "Registration Complete"; 
 return true;
 }
 </script>
